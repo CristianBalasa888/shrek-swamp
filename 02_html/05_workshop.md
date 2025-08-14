@@ -1,0 +1,36 @@
+<!-- Scrie un fisier HTML care afiseaza o lista de linkuri catre profile de social media. Foloseste doar HTML(fara css, fara javascript-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Social Profiles</title>
+</head>
+<body>
+  <header>
+    <h1>My Social Profiles</h1>
+    <p>Click a link to visit my profile on each platform.</p>
+  </header>
+
+  <main>
+        <a href="https://github.com/cristian.balasa888/">
+    <img src="github.jpg" alt="GitHub" style="width:40px; height:40px;">
+  </a>
+  <a href="https://www.linkedin.com/in/cristian.balasa">
+    <img src="linkedin.jpg" alt="LinkedIn" style="width:40px; height:40px;">
+  </a>
+  <a href="https://www.instagram.com/cristianbalasa">
+    <img src="instagram.jpg" alt="Instagram" style="width:40px; height:40px;">
+        </a>
+    </main>
+
+  <footer>
+    <p>© <span id="year">2025</span> Cristian Balasa</p>
+  </footer>
+</body>
+</html>
