@@ -1,10 +1,6 @@
 <!-- Scrie un fisier HTML care afiseaza o lista de linkuri catre profile de social media. Foloseste doar HTML(fara css, fara javascript-->
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

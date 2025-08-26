@@ -1,0 +1,44 @@
+/* Style for heading */
+h1 {
+  color: gold;
+  text-align: center;
+}
+
+/* Style for paragraph */
+p {
+    color:aqua;
+  text-align: center;
+      font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Style for div but in this case used to center the img in the div*/
+div {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+  width: 220px;
+  height: 200px;
+  border: 5px solid black;
+}
+
+/* Style for list */
+ul {
+  list-style-type: lower-greek;
+  color: green;
+  width: 200px;
+  margin: 60px auto 0 auto;
+  padding: 0;
+  list-style-position: inside;
+}
+
+/* Style for button */
+button {
+  background-color: orange;
+  margin: 60px auto 0 auto; /* Adds 40px space above the button */
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+
+}
+

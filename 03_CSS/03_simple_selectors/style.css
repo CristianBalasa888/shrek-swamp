@@ -1,0 +1,16 @@
+h2 {
+color:brown
+}
+.text-dark {
+  color: darkgoldenrod;
+}
+.text-bold {
+  font-weight: bold;
+}
+text-italic {
+  font-style: italic;
+}   
+display-flex {
+  display: flex;
+  justify-content: center;
+}
