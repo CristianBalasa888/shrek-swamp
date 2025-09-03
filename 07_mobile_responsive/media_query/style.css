@@ -1,0 +1,48 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: antiquewhite;
+
+
+}
+
+h1 {
+    display: none;
+    font-size: 100px;
+    color: white
+}
+/*wide screen*/
+@media (min-width: 1201px) {
+    body {
+        background-color: blueviolet;
+    }
+    #widescreen > h1 {
+        display: block;
+    }
+}
+/*laptop*/
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        background-color: coral;
+    }
+    #laptop > h1 {
+        display: block;
+    }
+}
+/*tablet*/
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: black;
+    }
+    #tablet > h1 {
+        display: block;
+    }
+}
+/*mobile*/
+@media (max-width: 480px) {
+    body {
+        background-color: darkgreen;
+    }
+    #mobile > h1 {
+        display: block;
+    }
+}

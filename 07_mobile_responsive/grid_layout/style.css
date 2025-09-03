@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    'one one two two'
+    'one one three four'
+    'five six seven seven'
+    'eight six seven seven';
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 30px;
+    gap: 5px;
+
+}
+@media (max-width: 500px) {
+.container {
+    grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six'
+    'seven'
+    'eight';
+grid-template-columns: 1fr;
+grid-template-rows: repeat(8, 1fr);
+}
+}
+
+#one {
+    grid-area: one;
+    background-color: red;
+}
+
+#two {
+    grid-area: two;
+    background-color: orange;
+}
+
+#three {
+    grid-area: three;
+    background-color: purple
+}
+
+#four {
+    grid-area: four;
+    background-color: darkblue;
+}
+
+#five {
+    grid-area: five;
+    background-color: grey ;
+}
+#six {
+    grid-area: six;
+    background-color: lightgreen;
+}
+#seven {
+    grid-area: seven;
+    background-color: lightblue;
+}
+#eight {
+    grid-area: eight;
+    background-color: magenta;
+}
