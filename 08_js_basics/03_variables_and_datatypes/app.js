@@ -134,3 +134,7 @@ console.log(typeof numeDeFamilie); // undefined
 // Operatorul ternar
 var varsta= 28;
 var poateConduce = varsta>=18? 'DA' : 'NU';
+
+// arrayuri#
+var numbers [6, 2, 7, 8, 9]; // index 0, 1, 2, 3, 4
+console.log(numbers[0]); // 6
