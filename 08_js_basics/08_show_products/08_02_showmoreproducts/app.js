@@ -49,10 +49,16 @@ var products = [
 ];
 function createProductCard(product) {
     return `
-    '
+    <div class="card">
+            <p class="name">${product.name}</p>
+            <img src="${product.imageURL}" alt="Product Image">
+            <p class="price">${product.price}lei</p>  
+        </div>
+    `;
+}
     
     
-    for (var i = 0; i < products.length-1; i++) {
-    var product = products[i];
-    var card = document.createElement("div");
-    card.classList.add("card");
+for (var i = 0; i < products.length-1; i++) {
+    var container = document.getElementById("container");
+
+    container.innerHTML += createProductCard(products[i]);}
