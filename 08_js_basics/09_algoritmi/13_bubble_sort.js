@@ -14,3 +14,5 @@ function bubbleSort(arr) {
 }
 console.log(bubbleSort([5, 3, 8, 4, 2])); // ar trebui sa printeze [2, 3, 4, 5, 8]
 console.log(bubbleSort([1, 2, 3, 4, 5])); // ar trebui sa printeze [1, 2, 3, 4, 5]
+
+

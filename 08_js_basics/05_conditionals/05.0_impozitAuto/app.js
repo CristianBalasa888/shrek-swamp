@@ -23,6 +23,6 @@ function calculeazaImpozitAuto() {
             impozitAuto = (capacitateCilindrica/200)*434;
         }
     
-    paragrafRezultat.innerHTML = "Aveti de platit" + impozitAuto + " lei";
+    paragrafRezultat.innerHTML = "Aveti de platit " + impozitAuto + " lei";
 
 }

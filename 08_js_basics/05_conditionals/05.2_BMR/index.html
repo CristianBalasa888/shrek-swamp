@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator BMR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #acadc0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #bdbed3;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: grey;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #rezultat {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calculator BMR</h2>
+    <label>Greutate (kg):</label>
+    <input type="number" id="greutate">
+
+    <label>Înălțime (cm):</label>
+    <input type="number" id="inaltime">
+
+    <label>Vârstă (ani):</label>
+    <input type="number" id="varsta">
+
+    <label>Sex:</label>
+    <select id="sex">
+      <option value="masculin">Masculin</option>
+      <option value="feminin">Feminin</option>
+    </select>
+
+    <label>Nivel activitate:</label>
+    <select id="activitate">
+      <option value="1.2">Sedentar</option>
+      <option value="1.375">Ușor activ</option>
+      <option value="1.55">Moderat activ</option>
+      <option value="1.725">Foarte activ</option>
+      <option value="1.9">Extrem de activ</option>
+    </select>
+
+    <button onclick="calculeazaBMR()">Calculează</button>
+    <div id="rezultat"></div>
+  </div>
+
+  <script>
+    function calculeazaBMR() {
+      const greutate = parseFloat(document.getElementById("greutate").value);
+      const inaltime = parseFloat(document.getElementById("inaltime").value);
+      const varsta = parseFloat(document.getElementById("varsta").value);
+      const sex = document.getElementById("sex").value;
+      const activitate = parseFloat(document.getElementById("activitate").value);
+
+      if (isNaN(greutate) || isNaN(inaltime) || isNaN(varsta)) {
+        document.getElementById("rezultat").innerText = "Te rog completează toate câmpurile!";
+        return;
+      }
+
+      let bmr;
+      if (sex === "masculin") {
+        bmr = 10 * greutate + 6.25 * inaltime - 5 * varsta + 5;
+      } else {
+        bmr = 10 * greutate + 6.25 * inaltime - 5 * varsta - 161;
+      }
+
+      const calorii = Math.round(bmr * activitate);
+
+      document.getElementById("rezultat").innerText = 
+        `BMR-ul tău este ${Math.round(bmr)} kcal/zi.\nAi nevoie de aproximativ ${calorii} kcal/zi în raportu cu activitatea ta.`;
+    }
+  </script>
+</body>
+</html>
